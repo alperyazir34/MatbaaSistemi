@@ -1,0 +1,31 @@
+﻿body {
+}
+.tablomsu-seyler{
+    background-color:#e4e4e4;
+    color:#383838;
+    width:100%;
+    margin-top:10px;
+}
+.stil-grup-one{
+    margin-top:10px;
+    background-color:#0094ff;
+    color:#383838;
+}
+.stil-grup-two{
+    margin-top:10px;
+    background-color:#fa3a3a;
+    color:#383838;
+}
+.stil-grup-three{
+    margin-top:10px;
+    background-color:#6ecc51;
+    color:#383838;
+}
+.stil-grup-four{
+    background-color:#e78d4d;
+    color:#383838;
+}
+.in-mi-put{
+    font-weight:700;
+}
+

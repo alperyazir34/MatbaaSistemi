@@ -1,0 +1,14 @@
+sql
+ip             94.73.148.3
+
+   
+db             u6036576_MucForm
+u   
+kullanýcý adý  6036576_Mucel    
+þifre          ZXgv11U1
+
+FileZilla
+
+Sunucu         94.73.151.138
+Kullanýcý adý  u8411922
+Þifre          WBsn70V1    

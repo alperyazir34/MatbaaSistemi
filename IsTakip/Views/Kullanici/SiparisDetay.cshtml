@@ -1,0 +1,915 @@
+﻿@model IEnumerable<IsTakip.Models.SiparislerDB>
+@{
+    ViewBag.Title = "SiparisDetay";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+<br />
+<p>
+    @Html.ActionLink("Siparis Lisesi", "SiparisListele","Kullanici", new { }, new { @class = "btn btn-success" })
+</p>
+
+
+<div id="divYazdir" style="display:block">
+
+
+    <center><h2>Muhasebe Bölümü</h2></center>
+    <div id="printPage">
+        @foreach (var item in Model)
+        {
+
+            <div>
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:150px;">
+
+                    <tbody>
+                        <tr>
+                            <th colspan="2" rowspan="2">
+                                <img style="width:150px; height:75px; margin-left:25%" src="http://www.poyrazmatbaa.com/wp-content/uploads/2018/04/cropped-Poyraz-Ofset-2018-Logo-%C3%87al%C4%B1%C5%9Fmas%C4%B1-2-1.png" />
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.SiparisTarihi)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.SiparisTarihi, new { type = "date", @class = "form-control" })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.TeslimTarihi)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.TeslimTarihi, new { type = "date", @class = "form-control" })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.MusteriAd)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.MusteriAd, new { htmlAttributes = new { @class = "form-control" } })
+
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.ID)</th>
+                            <th>@Html.DisplayFor(m => item.ID, new { htmlAttributes = new { @class = "form-control" } })</th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.MisinAdi)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.MisinAdi, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.Madet)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Madet, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Mozellikler)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Mozellikler, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.Mebat)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Mebat, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" rowspan="3">
+
+                                @Html.DisplayFor(m => item.Mnot, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+
+                            <th>@Html.DisplayNameFor(model => model.Prova)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Prova)
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Maket)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Maket)
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Ornek)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Ornek)
+                            </th>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <br />
+
+            <div>
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:150px;">
+                    <tr class="stil-grup-one">
+                        <th scope="col">Kağıt</th>
+                        <th scope="col">İÇLER</th>
+                        <th scope="col">KAPAK</th>
+                        <th scope="col">NOT</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KkagitCinsiIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.KkagitCinsiIc)
+
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.KkagitCinsiDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KagitGramiIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.KagitGramiIc)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.KagitGramiDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KebatIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.KebatIc)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.KebatDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KadetIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.KadetIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.KadetDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                </table>
+            </div>
+            <br />
+
+            <div>
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:250px;">
+                    <tr class="stil-grup-two">
+                        <th Height="10" width="195" scope="col">BASKI</th>
+                        <th Height="10" width="195" scope="col">İÇLER</th>
+                        <th Height="10" width="195" scope="col">KAPAK</th>
+                        <th Height="10" width="195" scope="col">NOT</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BmakinaIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BmakinaIc)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BMakinaDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BebatIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BebatIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BebatDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff"></th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BadetIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BadetIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BadetDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BbaskiIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BbaskiIc)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BbaskiDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BrenkIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BrenkIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BrenkDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BkalipIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BkalipIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BkalipDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BformaIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BformaIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BformaDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+
+                        <th colspan="4">
+
+                            @Html.DisplayFor(m => item.Bnot, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <br />
+
+            <div>
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:250px;">
+                    <tr class="stil-grup-three">
+                        <th Height="10" width="195" scope="col">BASKI SONRA</th>
+                        <th Height="10" width="195" scope="col">İÇLER</th>
+                        <th Height="10" width="195" scope="col">KAPAK</th>
+                        <th Height="10" width="195" scope="col">NOT</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Sselefon)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Sselefon)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SselefonDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Slak)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Slak)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SlakDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Sgofre)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Sgofre)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SgofreDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Svarak)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Svarak)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.Svarak)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Sperforaj)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Sperforaj)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SperforajDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.SozelKesim)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.SozelKesim)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SozelKesimDİs)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Scilt)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Scilt)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SciltDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Skirim)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Skirim, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SkirimDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Syapistirma)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Syapistirma, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SyapistirmaDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Ssivama)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Ssivama)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SsivamaDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Staslama)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Staslama)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.StaslamaDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Snumarator)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Snumarator)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SnumaratorDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Skesim)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Skesim)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SkesimDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Spaket)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Spaket)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SpaketDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">
+
+                            @Html.DisplayFor(m => item.Snot, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">
+
+                            @Html.DisplayFor(m => item.SiparisDurum, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                </table>
+                <br />
+
+
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:40px;">
+                    <tr class="stil-grup-four">
+                        <th colspan="2" scope="col" Height="10">Teslimat</th>
+                        <th Height="10" style="background-color:#ffffff">
+                            Toplam Tutar :
+                            <tb>@Html.DisplayFor(m => item.ToplamTutar, new { htmlAttributes = new { @class = "form-control" } }) </tb>
+                        </th>
+                    </tr>
+                    <tr>
+
+                        <th Height="10">@Html.DisplayNameFor(model => model.TodemeSekli)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.TodemeSekli, new { htmlAttributes = new { @class = "form-control in-mi-put" } })
+                        </th>
+                    </tr>
+                    <tr>
+                        <th Height="10">@Html.DisplayNameFor(model => model.TteslimAlacakKisi)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.TteslimAlacakKisi, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+
+                    </tr>
+                </table>
+
+            </div>
+            <br />
+
+
+
+
+
+
+        }
+    </div>
+
+</div>
+
+
+<div id="divYazdir2" style="display:none">
+
+    <center><h2>Baskı Bölümü</h2></center>
+    <div id="printPage2">
+        @foreach (var item in Model)
+        {
+
+            <div>
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:150px;">
+
+                    <tbody>
+                        <tr>
+                            <th colspan="2" rowspan="2">
+                                <img style="width:150px; height:75px; margin-left:25%" src="http://www.poyrazmatbaa.com/wp-content/uploads/2018/04/cropped-Poyraz-Ofset-2018-Logo-%C3%87al%C4%B1%C5%9Fmas%C4%B1-2-1.png" />
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.SiparisTarihi)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.SiparisTarihi, new { type = "date", @class = "form-control" })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.TeslimTarihi)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.TeslimTarihi, new { type = "date", @class = "form-control" })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.CariID)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.CariID, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.ID)</th>
+                            <th>@Html.DisplayFor(m => item.ID, new { htmlAttributes = new { @class = "form-control" } })</th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.MisinAdi)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.MisinAdi, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.Madet)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Madet, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Mozellikler)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Mozellikler, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                            <th>@Html.DisplayNameFor(model => model.Mebat)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Mebat, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" rowspan="3">
+
+                                @Html.DisplayFor(m => item.Mnot, new { htmlAttributes = new { @class = "form-control" } })
+                            </th>
+
+                            <th>@Html.DisplayNameFor(model => model.Prova)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Prova)
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Maket)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Maket)
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Ornek)</th>
+                            <th>
+                                @Html.DisplayFor(m => item.Ornek)
+                            </th>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <br />
+
+            <div>
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:150px;">
+                    <tr class="stil-grup-one">
+                        <th scope="col">Kağıt</th>
+                        <th scope="col">İÇLER</th>
+                        <th scope="col">KAPAK</th>
+                        <th scope="col">NOT</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KkagitCinsiIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.KkagitCinsiIc)
+
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.KkagitCinsiDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KagitGramiIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.KagitGramiIc)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.KagitGramiDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KebatIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.KebatIc)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.KebatDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.KadetIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.KadetIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.KadetDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                </table>
+            </div>
+            <br />
+
+            <div>
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:250px;">
+                    <tr class="stil-grup-two">
+                        <th Height="10" width="195" scope="col">BASKI</th>
+                        <th Height="10" width="195" scope="col">İÇLER</th>
+                        <th Height="10" width="195" scope="col">KAPAK</th>
+                        <th Height="10" width="195" scope="col">NOT</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BmakinaIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BmakinaIc)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BMakinaDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BebatIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BebatIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BebatDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff"></th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BadetIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BadetIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BadetDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BbaskiIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BbaskiIc)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BbaskiDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BrenkIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BrenkIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BrenkDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BkalipIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BkalipIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BkalipDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.BformaIc)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.BformaIc, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.BformaDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+
+                        <th colspan="4">
+
+                            @Html.DisplayFor(m => item.Bnot, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <br />
+
+            <div>
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:250px;">
+                    <tr class="stil-grup-three">
+                        <th Height="10" width="195" scope="col">BASKI SONRA</th>
+                        <th Height="10" width="195" scope="col">İÇLER</th>
+                        <th Height="10" width="195" scope="col">KAPAK</th>
+                        <th Height="10" width="195" scope="col">NOT</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Sselefon)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Sselefon)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SselefonDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Slak)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Slak)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SlakDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Sgofre)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Sgofre)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SgofreDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Svarak)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Svarak)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.Svarak)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Sperforaj)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Sperforaj)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SperforajDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.SozelKesim)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.SozelKesim)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SozelKesimDİs)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Scilt)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Scilt)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SciltDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Skirim)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Skirim, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SkirimDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Syapistirma)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Syapistirma, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SyapistirmaDis, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Ssivama)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Ssivama)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SsivamaDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Staslama)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Staslama)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.StaslamaDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Snumarator)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Snumarator)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SnumaratorDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Skesim)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Skesim)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SkesimDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Spaket)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.Spaket)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(m => item.SpaketDis)
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">
+
+                            @Html.DisplayFor(m => item.Snot, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+                        <th style="background-color:#ffffff">&nbsp;</th>
+                    </tr>
+                </table>
+                <br />
+
+
+                <table border="3" class="tablomsu-seyler" style="width:100%; height:40px;">
+                    <tr class="stil-grup-four">
+                        <th colspan="4" scope="col" Height="10">Teslimat</th>
+                    </tr>
+                    <tr>
+
+                        <th Height="10">@Html.DisplayNameFor(model => model.TodemeSekli)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.TodemeSekli, new { htmlAttributes = new { @class = "form-control in-mi-put" } })
+                        </th>
+                    </tr>
+                    <tr>
+                        <th Height="10">@Html.DisplayNameFor(model => model.TteslimAlacakKisi)</th>
+                        <th>
+                            @Html.DisplayFor(m => item.TteslimAlacakKisi, new { htmlAttributes = new { @class = "form-control" } })
+                        </th>
+
+                    </tr>
+                </table>
+
+            </div>
+            <br />
+
+        }
+    </div>
+
+</div>
+
+@foreach (var item in Model)
+{
+    <div>
+        <table border="3" class="tablomsu-seyler">
+            <tr>
+                <th width="205">
+                    @Html.DisplayNameFor(model => model.PersonelAdi)
+                </th>
+                <th>
+                    @Html.DisplayFor(m => item.PersonelAdi, new { @class = "form-control" })
+                </th>
+                <th width="425">
+
+                    <a class="btn btn-warning" style="width:205px; margin-left:4px;" href="javascript:printDiv('divYazdir');">Muhasebe için Yazdır</a>
+                    <a class="btn btn-warning" style="width:205px;" href="javascript:printDiv2('divYazdir2');">Baskı için Yazdır</a>
+
+                </th>
+            </tr>
+        </table>
+    </div>
+}
+
+<script type="text/javascript">
+    var a;
+    function Gorunurluk(b) {
+        var div1 = document.getElementById("divYazdir").style;
+        var div2 = document.getElementById("divYazdir2").style;
+        if (b == 2) {
+            div1.display = "none";
+            div2.display = "block";
+        }
+        else {
+
+            div1.display = "block";
+            div2.display = "none";
+        }
+    }
+    function printDiv(divName) {
+        a=1;
+        Gorunurluk(a);
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+    function printDiv2(divName) {
+        a=2;
+        Gorunurluk(a);
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+
+</script>
+

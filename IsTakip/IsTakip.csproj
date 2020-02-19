@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F63DA0A0-5257-4F87-8EB6-9EC96F4E4BC9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IsTakip</RootNamespace>
+    <AssemblyName>IsTakip</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\DAL.dll" />
+    <Content Include="bin\DAL.pdb" />
+    <Content Include="bin\DevExpress.Data.v17.1.dll" />
+    <Content Include="bin\DevExpress.Data.v17.1.xml" />
+    <Content Include="bin\DevExpress.Pdf.v17.1.Core.dll" />
+    <Content Include="bin\DevExpress.Pdf.v17.1.Core.xml" />
+    <Content Include="bin\DevExpress.Printing.v17.1.Core.dll" />
+    <Content Include="bin\DevExpress.Printing.v17.1.Core.xml" />
+    <Content Include="bin\de\DevExpress.Data.v17.1.resources.dll" />
+    <Content Include="bin\de\DevExpress.Pdf.v17.1.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Printing.v17.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Data.v17.1.resources.dll" />
+    <Content Include="bin\es\DevExpress.Pdf.v17.1.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Printing.v17.1.Core.resources.dll" />
+    <Content Include="bin\IsTakip.dll" />
+    <Content Include="bin\IsTakip.pdb" />
+    <Content Include="bin\ja\DevExpress.Data.v17.1.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Pdf.v17.1.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Printing.v17.1.Core.resources.dll" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\PagedList.dll" />
+    <Content Include="bin\PagedList.Mvc.dll" />
+    <Content Include="bin\PagedList.Mvc.xml" />
+    <Content Include="bin\PagedList.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\ru\DevExpress.Data.v17.1.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Pdf.v17.1.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Printing.v17.1.Core.resources.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
+    <Content Include="bin\System.Web.Webpages.Deployment.xml" />
+    <Content Include="bin\System.Web.Webpages.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.xml" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\iste-benim-stilim.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="css\jquery.dataTables.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\util.css" />
+    <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\montserrat\OFL.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="images\404-error-page-templates.jpg" />
+    <Content Include="images\icons\favicon.ico" />
+    <Content Include="images\img-01.png" />
+    <Content Include="images\LogoTech.png" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\Hesap.js" />
+    <Content Include="js\main.js" />
+    <Content Include="obj\Release\IsTakip.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\IsTakip.dll" />
+    <Content Include="obj\Release\IsTakip.pdb" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\DAL.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\DevExpress.Data.v17.1.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\DevExpress.Pdf.v17.1.Core.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\DevExpress.Printing.v17.1.Core.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\de\DevExpress.Data.v17.1.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\de\DevExpress.Pdf.v17.1.Core.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\de\DevExpress.Printing.v17.1.Core.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\es\DevExpress.Data.v17.1.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\es\DevExpress.Pdf.v17.1.Core.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\es\DevExpress.Printing.v17.1.Core.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\IsTakip.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ja\DevExpress.Data.v17.1.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ja\DevExpress.Pdf.v17.1.Core.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ja\DevExpress.Printing.v17.1.Core.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.Web.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\PagedList.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\PagedList.Mvc.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\csc.exe" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ru\DevExpress.Data.v17.1.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ru\DevExpress.Pdf.v17.1.Core.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ru\DevExpress.Printing.v17.1.Core.resources.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.Helpers.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.Mvc.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.Razor.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.Webpages.Deployment.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.Webpages.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Web.Webpages.Razor.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap-theme.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap-theme.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\bootstrap.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\iste-benim-stilim.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Content\PagedList.css" />
+    <Content Include="obj\Release\Package\PackageTmp\css\jquery.dataTables.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\css\main.css" />
+    <Content Include="obj\Release\Package\PackageTmp\css\util.css" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\OFL.txt" />
+    <Content Include="obj\Release\Package\PackageTmp\Global.asax" />
+    <Content Include="obj\Release\Package\PackageTmp\images\icons\favicon.ico" />
+    <Content Include="obj\Release\Package\PackageTmp\images\img-01.png" />
+    <Content Include="obj\Release\Package\PackageTmp\images\LogoTech.png" />
+    <Content Include="obj\Release\Package\PackageTmp\js\Hesap.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\jquery.dataTables.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\js\main.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\ai.0.22.9-build00167.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\bootstrap.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\bootstrap.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.10.2.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.10.2.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.9.0.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.9.0.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery.validate.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery.validate.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\modernizr-2.6.2.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\animate\animate.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\js\popper.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\select2\select2.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\select2\select2.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\select2\select2.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\select2\select2.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\tilt\tilt.jquery.min.js" />
+    <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\IsTakip.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\IsTakip.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\Package\PackageTmp\ApplicationInsights.config" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\ApplicationInsights.config" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\packages.config" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.10.2.min.map" />
+    <Content Include="obj\Release\Package\PackageTmp\scripts\jquery-1.9.0.min.map" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="obj\Release\Package\PackageTmp\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\CariHesap\Create.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\CariHesap\Details.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\CariHesap\Index.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\CariHesap\_CariHesapPartial.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Hata\Index.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\CariCreate.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\CariDetails.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\CariIndex.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\PersonelEkle.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\PersonelListesi.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\Siparis.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\SiparisDetay.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\SiparisDetayi.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\SiparisListele.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\TCSorgula.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\_KullaniciCariPartial.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Kullanici\_KullaniciSiparisAra.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\Index.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\PersonelEkle.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\PersonelListesi.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\SifreUnut.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\Siparis.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\SiparisAra.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\SiparisDetay.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\SiparisDetayi.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\SiparisListele.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\TCSorgula.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Personel\_SiparisAraPartial.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\_Layout.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\_Personel.cshtml" />
+    <Content Include="obj\Release\Package\PackageTmp\Views\web.config" />
+    <Content Include="obj\Release\Package\PackageTmp\Web.config" />
+    <Content Include="obj\Release\TransformWebConfig\assist\Web.config" />
+    <Content Include="obj\Release\TransformWebConfig\original\Web.config" />
+    <Content Include="obj\Release\TransformWebConfig\transformed\Web.config" />
+    <None Include="Properties\PublishProfiles\Burak.pubxml" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <None Include="scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.9.0.js" />
+    <Content Include="scripts\jquery-1.9.0.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="vendor\animate\animate.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\bootstrap\js\popper.js" />
+    <Content Include="vendor\bootstrap\js\popper.min.js" />
+    <Content Include="vendor\bootstrap\js\tooltip.js" />
+    <Content Include="vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="vendor\select2\select2.css" />
+    <Content Include="vendor\select2\select2.js" />
+    <Content Include="vendor\select2\select2.min.css" />
+    <Content Include="vendor\select2\select2.min.js" />
+    <Content Include="vendor\tilt\tilt.jquery.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CariHesapController.cs" />
+    <Compile Include="Controllers\HataController.cs" />
+    <Compile Include="Controllers\KullaniciController.cs" />
+    <Compile Include="Controllers\PersonelController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CariHesapDB.cs" />
+    <Compile Include="Models\PersonelDB.cs" />
+    <Compile Include="Models\SiparislerDB.cs" />
+    <Compile Include="Models\YetkiDurumDB.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\jquery-1.9.0.min.map" />
+    <Content Include="Views\Personel\PersonelEkle.cshtml" />
+    <Content Include="Views\Personel\Index.cshtml" />
+    <Content Include="Views\Personel\Siparis.cshtml" />
+    <Content Include="Views\Personel\SiparisDetayi.cshtml" />
+    <Content Include="Views\Personel\SiparisListele.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Personel\PersonelListesi.cshtml" />
+    <Content Include="Views\Personel\SiparisAra.cshtml" />
+    <Content Include="Views\Personel\SiparisDetay.cshtml" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Views\CariHesap\Index.cshtml" />
+    <Content Include="Views\CariHesap\Create.cshtml" />
+    <Content Include="Views\CariHesap\Details.cshtml" />
+    <Content Include="Views\CariHesap\_CariHesapPartial.cshtml" />
+    <Content Include="Views\Personel\TCSorgula.cshtml" />
+    <Content Include="Views\Personel\_SiparisAraPartial.cshtml" />
+    <Content Include="Views\Shared\_Personel.cshtml" />
+    <Content Include="Views\Kullanici\CariIndex.cshtml" />
+    <Content Include="Views\Kullanici\CariCreate.cshtml" />
+    <Content Include="Views\Kullanici\CariDetails.cshtml" />
+    <Content Include="Views\Kullanici\_KullaniciCariPartial.cshtml" />
+    <Content Include="Views\Kullanici\PersonelEkle.cshtml" />
+    <Content Include="Views\Kullanici\PersonelListesi.cshtml" />
+    <Content Include="Views\Kullanici\Siparis.cshtml" />
+    <Content Include="Views\Kullanici\SiparisListele.cshtml" />
+    <Content Include="Views\Kullanici\_KullaniciSiparisAra.cshtml" />
+    <Content Include="Views\Kullanici\SiparisDetayi.cshtml" />
+    <Content Include="Views\Kullanici\SiparisDetay.cshtml" />
+    <Content Include="Views\Kullanici\TCSorgula.cshtml" />
+    <Content Include="Views\Personel\SifreUnut.cshtml" />
+    <Content Include="Views\Hata\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\Views\" />
+    <Folder Include="obj\Release\TempPE\" />
+    <Folder Include="obj\Release\TransformWebConfig\transformed\Views\" />
+    <Folder Include="Views\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{66ea163e-0e48-40ec-ac5a-ff02381b7e2d}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>17100</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17100/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,259 @@
+﻿@model IEnumerable<IsTakip.Models.CariHesapDB>
+@{
+    ViewBag.Title = "CariDetails";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+@Html.AntiForgeryToken()
+
+<br /><br />
+<a class="btn btn-success" href="javascript:printDiv('divYazdir');">Yazdır</a>
+
+
+
+<div id="divYazdir">
+
+
+    <center><h1 style="color:cornflowerblue">Hesap Detayı</h1></center>
+
+    <div id="printPage">
+
+        @foreach (var item in Model)
+        {
+            <div>
+
+                <hr />
+                @Html.HiddenFor(model => item.ID)
+
+                <table class="table table-hover table-bordered" style="border:3px solid #000000">
+                    <tr>
+                        <th>
+                            Kimlik No
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.KimlikNo)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Müşteri Adı
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.MusteriAd)
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Doğum tarihi
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.DogumTarihi)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Cinsiyet
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.Cinsiyet)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Ünvan
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.Unvan)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Adres
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.Adres)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Telefon
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.Telefon)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Cep Telefonu
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.CepTel)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            E-Mail
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.EMail)
+                        </td>
+                    </tr>
+
+                    @*////////////////////////////*@
+
+
+
+
+
+                    <tr>
+                        <th>
+                            Vergi Dairesi
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.VergiDairesi)
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <th>
+                            Vergi No
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.VergiNo)
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <th>
+                            Teslimat Adresi
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => item.TeslimatAdres)
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        }
+    </div>
+
+    <div id="liste">
+        <table class="table table-hover table-bordered" style="border:3px solid #000000; border-top:none;">
+
+            <div style="background-color:#ff6a00; width:100%; height:45px; font-size:20px; border:2px solid #000000; border-bottom:none;">
+
+                <p style="color:black; margin-left:5px; margin-top:5px;">
+                    Siparişler
+                </p>
+            </div>
+            <tr>
+
+                <th>
+                    Sipariş Kodu
+                </th>
+                <th>
+                    Hesap No
+                </th>
+                <th>
+                    Müşteri Ad
+                </th>
+
+                <th>
+                    Teslim Tarihi
+                </th>
+                <th>
+                    Sipariş Durumu
+                </th>
+                <th>
+                    Sipariş Ücreti
+                </th>
+                <th>
+                    İşlemler
+                </th>
+            </tr>
+
+            @foreach (var item in ViewBag.cariliste)
+            {
+                <tr>
+                    <td>
+                        @item.ID
+                    </td>
+                    <td>
+                        @item.CariID
+                    </td>
+                    <td>
+                        @item.MusteriAd
+                    </td>
+
+                    <td>
+                        @item.TeslimTarihi
+                    </td>
+                    <td>
+                        @item.SiparisDurum
+                    </td>
+                    <td>
+                        @item.ToplamTutar ₺
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Güncelle", "SiparisDuz", "Kullanici", new { id = item.ID }, new { @class = "btn btn-success" }) |*@
+                        @Html.ActionLink("Detay", "SiparisDetay", "Kullanici", new { id = item.ID }, new { @class = "btn btn-success" }) 
+                        @*<input type="button" value="Sil" data-id="@item.ID" class="delete-row btn btn-danger" />*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</div>
+
+<div>
+
+    @Html.ActionLink("Lİsteye Geri Dön", "CariIndex", "Kullanici", new { @class = "btn btn-success" })
+</div>
+
+
+
+
+<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script> @*Ekrana yazdırma JavaScript kodu ID ile istenilen yeri yazdırır*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".delete-row").click(function () {
+            var id = $(this).attr("data-id");
+            var closestTR = $(this).closest("tr");
+            var confirmDelete = confirm('Form Numara\'si' + id + ' olan kayıdı silmek istediğinizden emin misiniz?');
+            if (confirmDelete) {
+                $.ajax({
+                    url: '/Personel/SiparisSil/' + id,
+                    type: 'POST',
+                    success:function(result) {
+                        if (result == true) {
+                            closestTR.fadeOut(1000, function() {
+                                closestTR.remove();
+                            });
+                        }
+                        else alert("Silme işlemi sırasında hata oluştu");
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>
+

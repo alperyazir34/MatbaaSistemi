@@ -1,0 +1,16 @@
+﻿@model IsTakip.Models.CariHesapDB
+@{
+    ViewBag.Title = "TCSorgula";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+<h3>Kimlik Numarası Sorgula</h3>
+<form action="/Kullanici/TCSorgula" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+
+    @Html.TextBoxFor(m => Model.KimlikNo)
+    <input type="submit" value="Sorgula" class="btn btn-success" />
+
+</form>
+

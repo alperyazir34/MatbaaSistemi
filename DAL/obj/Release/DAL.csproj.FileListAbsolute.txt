@@ -1,0 +1,15 @@
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\bin\Release\DAL.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\bin\Release\DAL.pdb
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\obj\Release\DAL.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\obj\Release\DAL.pdb
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\bin\Release\DAL.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\bin\Release\DAL.pdb
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\obj\Release\DAL.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\obj\Release\DAL.pdb
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\bin\Release\DAL.dll
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\bin\Release\DAL.pdb
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\obj\Release\DAL.dll
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\obj\Release\DAL.pdb

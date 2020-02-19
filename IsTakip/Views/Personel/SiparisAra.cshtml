@@ -1,0 +1,43 @@
+﻿@model IsTakip.Models.SiparislerDB
+
+@{
+    ViewBag.Title = "SiparisAra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Siparis Ara</h2>
+
+@using (Html.BeginForm("SiparisAra", "Personel", FormMethod.Post))
+{
+
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+       <table>
+           <tr>
+               <th colspan="2" rowspan="2">
+               </th>
+               <th>@Html.LabelFor(model => model.SiparisTarihi, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+               <th>
+                   @Html.TextBoxFor(m => m.SiparisTarihi, new { type = "date", @class = "form-control" })
+                   @Html.ValidationMessageFor(model => model.SiparisTarihi, "", new { @class = "text-danger" })
+               </th>
+           </tr>
+           <tr>
+               <th>@Html.LabelFor(model => model.ID, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+               <th>
+                   @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                   @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
+               </th>
+           </tr>
+       </table>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Ara" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+

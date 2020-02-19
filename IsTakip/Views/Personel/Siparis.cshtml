@@ -1,0 +1,1006 @@
+﻿@model IsTakip.Models.SiparislerDB
+
+@{
+    ViewBag.Title = "Sipariş Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Siparis", "Personel", FormMethod.Post))
+{   @Html.HiddenFor(model => model.ID)
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <hr />
+    <table border="3" class="tablomsu-seyler">
+        <tbody>
+            <tr>
+                <th colspan="2" rowspan="2">
+                    MÜCELLİT FORM
+                </th>
+                <th>@Html.LabelFor(model => model.SiparisTarihi, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+                <th>
+                    @*@Html.TextBoxFor(m => m.SiparisTarihi, new { type = "date", @class = "form-control in-mi-put", onkeydown = "return event.keyCode!=13" })*@
+                    @Html.TextBoxFor(model => model.SiparisTarihi, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(model => model.SiparisTarihi, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+            <tr>
+                <th>@Html.LabelFor(model => model.TeslimTarihi, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+                <th>
+                    @Html.TextBoxFor(model => model.TeslimTarihi, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(model => model.TeslimTarihi, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+            @*/////////////////////////*@
+            <tr>
+                <th width="150">@Html.LabelFor(model => model.MusteriAd, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+                <th width="570">
+                    @Html.TextBoxFor(model => model.CariID, new { @class = "form-control", style = "display: none;" })
+                    @Html.DisplayFor(model => model.MusteriAd, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.MusteriAd, "", new { @class = "text-danger" })
+                </th>
+                <th>@Html.LabelFor(model => model.ID, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+                <th>@ViewBag.ID</th>
+            </tr>
+
+            <tr>
+                <th>@Html.LabelFor(model => model.MisinAdi, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+                <th>
+                    @Html.EditorFor(model => model.MisinAdi, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                    @Html.ValidationMessageFor(model => model.MisinAdi, "", new { @class = "text-danger" })
+                </th>
+                <th>@Html.LabelFor(model => model.Madet, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+                <th>
+                    @Html.EditorFor(model => model.Madet, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                    @Html.ValidationMessageFor(model => model.Madet, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+            <tr>
+                <th>@Html.LabelFor(model => model.Mozellikler, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+                <th>
+                    @Html.EditorFor(model => model.Mozellikler, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                    @Html.ValidationMessageFor(model => model.Mozellikler, "", new { @class = "text-danger" })
+                </th>
+                <th>@Html.LabelFor(model => model.Mebat, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+                <th style="width: 113px; height: 22px;">
+                    @Html.EditorFor(model => model.Mebat, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                    @Html.ValidationMessageFor(model => model.Mebat, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" rowspan="3" style="background-color:#ffffff">
+
+                    @Html.ValidationMessageFor(model => model.Mnot, "Not", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Mnot, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                </th>
+
+                <th>@Html.LabelFor(model => model.Prova, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+                <th>
+                    @Html.DropDownListFor(model => model.Prova, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                    @Html.ValidationMessageFor(model => model.Prova, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+            <tr>
+                <th>@Html.LabelFor(model => model.Maket, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+                <th>
+                    @Html.DropDownListFor(model => model.Maket, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                    @Html.ValidationMessageFor(model => model.Maket, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+            <tr>
+                <th>@Html.LabelFor(model => model.Ornek, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+                <th>
+                    @Html.DropDownListFor(model => model.Ornek, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                    @Html.ValidationMessageFor(model => model.Ornek, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <table border="3" class="tablomsu-seyler">
+        <tr class="stil-grup-one">
+            <th Height="10" width="195" scope="col">Kağıt</th>
+            <th Height="10" width="195" scope="col">İÇLER</th>
+            <th Height="10" width="195" scope="col">KAPAK</th>
+            <th Height="10" width="195" scope="col">İÇLER FİYAT</th>
+            <th Height="10" width="195" scope="col">KAPAK FİYAT</th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.KkagitCinsiIc, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.KkagitCinsiIc, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "1.Hamur", Value = "1.Hamur".ToString()},
+        new SelectListItem { Selected = false, Text = "Kuşe", Value = "Kuşe".ToString()},
+        new SelectListItem { Selected = false, Text = "Bristol", Value = "Bristol".ToString()},
+        new SelectListItem { Selected = false, Text = "Enzo", Value = "Enzo".ToString()},
+        new SelectListItem { Selected = false, Text = "İvory", Value = "İvory".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+
+                @Html.ValidationMessageFor(model => model.KkagitCinsiIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.KkagitCinsiDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "1.Hamur", Value = "1.Hamur".ToString()},
+        new SelectListItem { Selected = false, Text = "Kuşe", Value = "Kuşe".ToString()},
+        new SelectListItem { Selected = false, Text = "Bristol", Value = "Bristol".ToString()},
+        new SelectListItem { Selected = false, Text = "Enzo", Value = "Enzo".ToString()},
+        new SelectListItem { Selected = false, Text = "İvory", Value = "İvory".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.KkagitCinsiDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">&nbsp;</th>
+            <th style="background-color:#ffffff">&nbsp;</th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.KagitGramiIc, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.KagitGramiIc, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "60", Value = "60".ToString()},
+        new SelectListItem { Selected = false, Text = "70", Value = "70".ToString()},
+        new SelectListItem { Selected = false, Text = "80", Value = "80".ToString()},
+        new SelectListItem { Selected = false, Text = "90", Value = "90".ToString()},
+        new SelectListItem { Selected = false, Text = "115", Value = "115".ToString()},
+        new SelectListItem { Selected = false, Text = "135", Value = "135".ToString()},
+        new SelectListItem { Selected = false, Text = "150", Value = "150".ToString()},
+        new SelectListItem { Selected = false, Text = "170", Value = "170".ToString()},
+        new SelectListItem { Selected = false, Text = "200", Value = "200".ToString()},
+        new SelectListItem { Selected = false, Text = "220", Value = "220".ToString()},
+        new SelectListItem { Selected = false, Text = "250", Value = "250".ToString()},
+        new SelectListItem { Selected = false, Text = "300", Value = "300".ToString()},
+        new SelectListItem { Selected = false, Text = "350", Value = "350".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put", id = "KagitGramiIc", onchange = "CallChangefunc(this.value)" })
+                @Html.ValidationMessageFor(model => model.KagitGramiIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.KagitGramiDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "60", Value = "60".ToString()},
+        new SelectListItem { Selected = false, Text = "70", Value = "70".ToString()},
+        new SelectListItem { Selected = false, Text = "80", Value = "80".ToString()},
+        new SelectListItem { Selected = false, Text = "90", Value = "90".ToString()},
+        new SelectListItem { Selected = false, Text = "115", Value = "115".ToString()},
+        new SelectListItem { Selected = false, Text = "135", Value = "135".ToString()},
+        new SelectListItem { Selected = false, Text = "150", Value = "150".ToString()},
+        new SelectListItem { Selected = false, Text = "170", Value = "170".ToString()},
+        new SelectListItem { Selected = false, Text = "200", Value = "200".ToString()},
+        new SelectListItem { Selected = false, Text = "220", Value = "220".ToString()},
+        new SelectListItem { Selected = false, Text = "250", Value = "250".ToString()},
+        new SelectListItem { Selected = false, Text = "300", Value = "300".ToString()},
+        new SelectListItem { Selected = false, Text = "350", Value = "350".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put", id = "KagitGramiDis", onchange = "CallChangefunc(this.value)" })
+                @Html.ValidationMessageFor(model => model.KagitGramiDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">&nbsp;</th>
+            <th style="background-color:#ffffff">&nbsp;</th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.KebatIc, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.KebatIc, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "50x70", Value = "50x70".ToString()},
+        new SelectListItem { Selected = false, Text = "57x82", Value = "57x82".ToString()},
+        new SelectListItem { Selected = false, Text = "64x90", Value = "64x90".ToString()},
+        new SelectListItem { Selected = false, Text = "70x100", Value = "70x100".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put", id = "KebatIc", onchange = "CallChangefunc(this.value)" })
+                @Html.ValidationMessageFor(model => model.KebatIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.KebatDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "50x70", Value = "50x70".ToString()},
+        new SelectListItem { Selected = false, Text = "57x82", Value = "57x82".ToString()},
+        new SelectListItem { Selected = false, Text = "64x90", Value = "64x90".ToString()},
+        new SelectListItem { Selected = false, Text = "70x100", Value = "70x100".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put", id = "KebatDis", onchange = "CallChangefunc(this.value)" })
+                @Html.ValidationMessageFor(model => model.KebatDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="icesonuc" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="disesonuc" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.KadetIc, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.EditorFor(model => model.KadetIc, new { htmlAttributes = new { @class = "form-control", id = "KadetIc", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.KadetIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.EditorFor(model => model.KadetDis, new { htmlAttributes = new { @class = "form-control", id = "KadetDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.KadetDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="icadetsonuc" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="disadetsonuc" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.ValidationMessage("Bir Tabakadan Alınan", "Bir Tabakadan Alınan", new { @class = "text-danger" })
+
+            </th>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TabakaIc", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TabakaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff" rowspan="2">
+                <tb id="FersudeGree" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+            <th style="background-color:#ffffff" rowspan="2">
+                <tb id="KapakFersudeGree" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.ValidationMessage("Fersude", "Fersude", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "FersudeIc", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "FersudeDıs", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+
+
+        </tr>
+    </table>
+    <table border="3" class="tablomsu-seyler">
+        <tr class="stil-grup-one">
+            <th Height="10" width="195" scope="col">KAĞIT TON</th>
+            <th Height="10" width="195" scope="col">DÖVİZ</th>
+            <th Height="10" width="195" scope="col">VADE</th>
+            <th Height="10" width="195" scope="col">KAGIT KG</th>
+            <th Height="10" width="195" scope="col">KAĞIT VADELİ</th>
+            <th Height="10" width="195" scope="col">KAGIT TUTARI</th>
+        </tr>
+        <tr>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "KagitTon", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "Doviz", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "Vade", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="KagitKgSon" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="KagitVade" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="KagitTutar" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+
+        </tr>
+    </table>
+    <table border="3" class="tablomsu-seyler">
+        <tr class="stil-grup-one">
+            <th Height="10" width="195" scope="col">KAĞIT TON KAPAK</th>
+            <th Height="10" width="195" scope="col">DÖVİZ KAPAK</th>
+            <th Height="10" width="195" scope="col">VADE KAPAK</th>
+            <th Height="10" width="195" scope="col">KAGIT KG KAPAK</th>
+            <th Height="10" width="195" scope="col">KAĞIT VADELİ KAPAK</th>
+            <th Height="10" width="195" scope="col">KAGIT TUTARI KAPAK</th>
+        </tr>
+        <tr>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "KKagitTon", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "KDoviz", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th>
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "KVade", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="KKagitKgSon" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="KKagitVade" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+            <th style="background-color:#ffffff">
+                <tb id="KKagitTutar" style="background-color:#ffffff">&nbsp;</tb>
+            </th>
+
+        </tr>
+    </table>
+    <table border="3" class="tablomsu-seyler">
+        <tr class="stil-grup-two">
+            <th Height="10" width="195" scope="col">BASKI</th>
+            <th Height="10" width="195" scope="col">İÇLER</th>
+            <th Height="10" width="195" scope="col">KAPAK</th>
+            <th Height="10" width="195" scope="col">İÇLER FİYAT</th>
+            <th Height="10" width="195" scope="col">KAPAK FİYAT</th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.BmakinaIc, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.BmakinaIc, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Ryobi", Value = "Ryobi".ToString()},
+        new SelectListItem { Selected = false, Text = "Komori 4 Renk", Value = "Komori".ToString()},
+        new SelectListItem { Selected = false, Text = "Komori 5 Renk", Value = "5 Renk".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.BmakinaIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.BMakinaDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Ryobi", Value = "Ryobi".ToString()},
+        new SelectListItem { Selected = false, Text = "Komori 4 Renk", Value = "Komori".ToString()},
+        new SelectListItem { Selected = false, Text = "Komori 5 Renk", Value = "5 Renk".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.BMakinaDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TBMakinaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TBMakinaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.BebatIc, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.EditorFor(model => model.BebatIc, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BebatIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.EditorFor(model => model.BebatDis, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BebatDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TBebatDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TBebatDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.BadetIc, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.EditorFor(model => model.BadetIc, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BadetIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.EditorFor(model => model.BadetDis, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BadetDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TBadetDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TBadetDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.BbaskiIc, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.BbaskiIc, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Tekyüz", Value = "Tekyüz".ToString()},
+        new SelectListItem { Selected = false, Text = "Ön Arka", Value = "Ön Arka".ToString()},
+        new SelectListItem { Selected = false, Text = "Revolta-EM", Value = "Revolta-EM".ToString()},
+        new SelectListItem { Selected = false, Text = "Revolta-MM", Value = "Revolta-MM".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.BbaskiIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.BbaskiDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Tekyüz", Value = "Tekyüz".ToString()},
+        new SelectListItem { Selected = false, Text = "Ön Arka", Value = "Ön Arka".ToString()},
+        new SelectListItem { Selected = false, Text = "Revolta-EM", Value = "Revolta-EM".ToString()},
+        new SelectListItem { Selected = false, Text = "Revolta-MM", Value = "Revolta-MM".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.BbaskiDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TBbaskiDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TBbaskiDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.BrenkIc, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.EditorFor(model => model.BrenkIc, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BrenkIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.EditorFor(model => model.BrenkDis, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BrenkDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TBrenkDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TBrenkDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.BkalipIc, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+            <th>
+                @Html.EditorFor(model => model.BkalipIc, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BkalipIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.EditorFor(model => model.BkalipDis, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BkalipDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TBkalipDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TBkalipDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.BformaIc, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.EditorFor(model => model.BformaIc, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BformaIc, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.EditorFor(model => model.BformaDis, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.BformaDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TBformaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TBformaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+        </tr>
+        <tr>
+
+            <th colspan="5" style="background-color:#ffffff">
+
+                @Html.ValidationMessageFor(model => model.Bnot, "Not", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Bnot, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+            </th>
+        </tr>
+    </table>
+    <table border="3" class="tablomsu-seyler">
+        <tr class="stil-grup-three">
+            <th Height="10" width="195" scope="col">BASKI SONRA</th>
+            <th Height="10" width="195" scope="col">İÇLER</th>
+            <th Height="10" width="195" scope="col">KAPAK</th>
+            <th Height="10" width="195" scope="col">İÇLER FİYAT</th>
+            <th Height="10" width="195" scope="col">KAPAK FİYAT</th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Sselefon, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Sselefon, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Parlak", Value = "Parlak".ToString()},
+        new SelectListItem { Selected = false, Text = "Mat", Value = "Mat".ToString()},
+        new SelectListItem { Selected = false, Text = "Kapak Ön Yüz", Value = "Kapak Ön Yüz".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Sselefon, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SselefonDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Parlak", Value = "Parlak".ToString()},
+        new SelectListItem { Selected = false, Text = "Mat", Value = "Mat".ToString()},
+        new SelectListItem { Selected = false, Text = "Kapak Ön Yüz", Value = "Kapak Ön Yüz".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SselefonDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSselefonDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSselefonDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Slak, htmlAttributes: new { @class = "control-label col-md-2 in-mi-put" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Slak, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Kısmi", Value = "Kısmi".ToString()},
+        new SelectListItem { Selected = false, Text = "Kabartma", Value = "Kabartma".ToString()},
+        new SelectListItem { Selected = false, Text = "Simli", Value = "Simli".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Slak, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SlakDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Kısmi", Value = "Kısmi".ToString()},
+        new SelectListItem { Selected = false, Text = "Kabartma", Value = "Kabartma".ToString()},
+        new SelectListItem { Selected = false, Text = "Simli", Value = "Simli".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SlakDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSlakDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSlakDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Sgofre, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Sgofre, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Sgofre, "", new { @class = "text-danger in-mi-put" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SgofreDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SgofreDis, "", new { @class = "text-danger in-mi-put" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSgofreDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSgofreDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Svarak, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Svarak, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Svarak, "", new { @class = "text-danger in-mi-put" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.Svarak, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SvarakDis, "", new { @class = "text-danger in-mi-put" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSvarakDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSvarakDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Sperforaj, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Sperforaj, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Sperforaj, "", new { @class = "text-danger in-mi-put" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SperforajDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SperforajDis, "", new { @class = "text-danger in-mi-put" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSperforajDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSperforajDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.SozelKesim, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.SozelKesim, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SozelKesim, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SozelKesimDİs, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SozelKesimDİs, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSozelKesimDİs", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSozelKesimDİs", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Scilt, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Scilt, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Amerikan", Value = "Amerikan".ToString()},
+        new SelectListItem { Selected = false, Text = "Pur", Value = "Pur".ToString()},
+        new SelectListItem { Selected = false, Text = "İplik", Value = "İplik".ToString()},
+        new SelectListItem { Selected = false, Text = "Sert Kağıt", Value = "Sert Kağıt".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Scilt, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SciltDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Amerikan", Value = "Amerikan".ToString()},
+        new SelectListItem { Selected = false, Text = "Pur", Value = "Pur".ToString()},
+        new SelectListItem { Selected = false, Text = "İplik", Value = "İplik".ToString()},
+        new SelectListItem { Selected = false, Text = "Sert Kağıt", Value = "Sert Kağıt".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SciltDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSciltDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSciltDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Skirim, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.EditorFor(model => model.Skirim, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.Skirim, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.EditorFor(model => model.SkirimDis, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.SkirimDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSkirimDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSkirimDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Syapistirma, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.EditorFor(model => model.Syapistirma, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.Syapistirma, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.EditorFor(model => model.SyapistirmaDis, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                @Html.ValidationMessageFor(model => model.SyapistirmaDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSyapistirmaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSyapistirmaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Ssivama, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Ssivama, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Ssivama, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SsivamaDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SsivamaDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSsivamaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSsivamaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Staslama, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Staslama, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Staslama, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.StaslamaDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.StaslamaDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TStaslamaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TStaslamaDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Snumarator, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Snumarator, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Snumarator, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SnumaratorDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SnumaratorDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSnumaratorDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSnumaratorDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Skesim, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Skesim, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Skesim, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SkesimDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SkesimDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSkesimDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSkesimDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Spaket, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+            <th>
+                @Html.DropDownListFor(model => model.Spaket, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.Spaket, "", new { @class = "text-danger" })
+            </th>
+            <th>
+                @Html.DropDownListFor(model => model.SpaketDis, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Var", Value = "Var".ToString()},
+        new SelectListItem { Selected = false, Text = "Yok", Value = "Yok".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put" })
+                @Html.ValidationMessageFor(model => model.SpaketDis, "", new { @class = "text-danger" })
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "TSpaketDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+            <th style="background-color:#ffffff">
+                @Html.TextBox("asd", "", new { @class = "form-control", id = "2TSpaketDis", onchange = "CallChangefunc(this.value)", onkeydown = "return event.keyCode!=13" })
+
+            </th>
+        </tr>
+        <tr>
+            <th colspan="4" style="background-color:#ffffff">
+
+                @Html.ValidationMessageFor(model => model.Snot, "Not", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Snot, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+            </th>
+            <th style="background-color:#ffffff">&nbsp;</th>
+        </tr>
+    </table>
+        <table border="3" class="tablomsu-seyler">
+            <tr class="stil-grup-four col-md-12">
+                <th colspan="1" scope="col" Height="10">Teslimat</th>
+                <th Height="10" style="background-color:#ffffff">İÇLER TUTAR :<tb id="SonucBuyuk"></tb></th>
+                <th Height="10" style="background-color:#ffffff">KAPAK TUTAR :<tb id="2SonucBuyuk"></tb></th>
+                <th Height="10" style="background-color:#ffffff">Toplam Tutar : <input class="text-box single-line valid disabled" readonly="readonly"  id="ToplamTutar" name="ToplamTutar" onkeydown="return event.keyCode!=13" type="text" value=""></th>
+               
+               
+            </tr>
+            <tr>
+                <th Height="10">@Html.LabelFor(model => model.Tpaket, htmlAttributes: new { @class = "control-label col-md-8" })</th>
+                <th>
+                    @Html.EditorFor(model => model.Tpaket, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                    @Html.ValidationMessageFor(model => model.Tpaket, "", new { @class = "text-danger" })
+                </th>
+                <th Height="10">@Html.LabelFor(model => model.TodemeSekli, htmlAttributes: new { @class = "control-label col-md-12" })</th>
+                <th>
+                    @Html.EditorFor(model => model.TodemeSekli, new { htmlAttributes = new { @class = "form-control in-mi-put", onkeydown = "return event.keyCode!=13" } })
+                    @Html.ValidationMessageFor(model => model.TodemeSekli, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+            <tr>
+                <th Height="10">@Html.LabelFor(model => model.TteslimAlacakKisi, htmlAttributes: new { @class = "control-label col-md-12" })</th>
+                <th>
+                    @Html.EditorFor(model => model.TteslimAlacakKisi, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                    @Html.ValidationMessageFor(model => model.TteslimAlacakKisi, "", new { @class = "text-danger" })
+                </th>
+                <th Height="10">@Html.LabelFor(model => model.TteslimYeri, htmlAttributes: new { @class = "control-label col-md-12" })</th>
+                <th>
+                    @Html.EditorFor(model => model.TteslimYeri, new { htmlAttributes = new { @class = "form-control", onkeydown = "return event.keyCode!=13" } })
+                    @Html.ValidationMessageFor(model => model.TteslimYeri, "", new { @class = "text-danger" })
+                </th>
+            </tr>
+            @*<tr>
+                <th>
+                   @Html.DisplayNameFor(m => m.SiparisDurum)
+                </th>
+                <td>
+                    @Html.DropDownListFor(model => model.SiparisDurum, new SelectList(
+      new List<SelectListItem>
+      {
+
+        new SelectListItem { Selected = false, Text = "Hazırlandı", Value = "Hazırlandı".ToString()},
+        new SelectListItem { Selected = false, Text = "Teslim Edildi", Value = "Teslim Edildi".ToString()},
+
+      }, "Value", "Text", 1), "Hazırlanıyor", new { @class = "form-control in-mi-put", style = "width:250px;" })
+                    @Html.ValidationMessageFor(model => model.SiparisDurum, "", new { @class = "text-danger" })
+
+                </td>
+            </tr>*@
+        </table>
+        <table border="3" class="tablomsu-seyler">
+            <tr>
+                <th width="205">
+                    @Html.LabelFor(model => model.PersonelAdi, htmlAttributes: new { @class = "control-label col-md-8" })
+                </th>
+                <th>
+                    @Html.DropDownListFor(model => model.PersonelID, new SelectList(ViewBag.PerAdi, "ID", "PersonelAdi"), "Personel Seçiniz", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PersonelID, "", new { @class = "text-danger" })
+                </th>
+               
+                    <th width="425">
+                        <input type="submit" value="Kaydet" class="btn btn-danger btn-block " id="Kaydet" />
+
+                    </th>
+                
+                
+            </tr>
+
+        </table>
+
+}
+
+
+<script src="~/js/Hesap.js"></script>
+@*<script type="text/javascript">
+        $(document).ready(function () {
+            $("#Kaydet").click(function () {
+                alert("Basıldı");
+                var id = $("#TT").val();
+                $.ajax({
+                    url: '/Personel/Siparis/' + id,
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (data) {
+                        $("TT").html(data.ToplamTutar);
+                    }
+                });
+            });
+        });
+    </script>*@
+
+
+
+

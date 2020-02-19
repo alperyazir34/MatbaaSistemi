@@ -1,0 +1,146 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<IsTakip.Models.SiparislerDB>
+
+@{
+    ViewBag.Title = "Sipariş Listesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<table border="0" style="border-top:0px;">
+    <tr>
+        <td></td>
+        <td style="float:right; margin-left:600px;">
+            @foreach (var item in Model)
+            {
+                int sayac = 0;
+                if (sayac == 0)
+                {
+                    @Html.Partial("_SiparisAraPartial", item)
+                    break;
+                }
+
+            }
+        </td>
+    </tr>
+</table>
+<br />
+
+<table class="table" border="1" id="splist">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+
+            <th>
+                Ad Soyad
+            </th>
+
+            <th>
+                İşin Adı
+            </th>
+            <th>
+                Not
+            </th>
+            <th>
+                Personel Adı
+            </th>
+            <th>
+                Teslim Tarihi
+            </th>
+            <th>
+                Sipariş tarihi
+            </th>
+            <th>
+                Sipariş Durumu
+            </th>
+            <th>
+                İşlemler
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        if (item.SiparisDurum.ToString() != "Teslim Edildi")
+        {
+
+
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(ModelItem => item.ID)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(ModelItem => item.MusteriAd)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(ModelItem => item.MisinAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(ModelItem => item.Mnot)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(ModelItem => item.PersonelAdi)
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(ModelItem => item.TeslimTarihi)*@
+                        @Convert.ToDateTime(item.TeslimTarihi).ToString("dd/MM/yyyy")
+                    </td>
+                    <td>
+                        @*@Html.DisplayFor(ModelItem => item.SiparisTarihi)*@
+                        @Convert.ToDateTime(item.SiparisTarihi).ToString("dd/MM/yyyy")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(ModelItem => item.SiparisDurum)
+                    </td>
+                    <td>
+                       
+                            @*@Html.ActionLink("Düzenle", "SiparisDuz", new { id = item.ID }, new { @class = "btn btn-success" })*@
+                            @Html.ActionLink("Hazırlandı", "SiparisHazirlaniyor", new { id = item.ID }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Teslim Edildi", "SiparisTeslimEdildi", new { id = item.ID }, new { @class = "btn btn-success" })
+                            @Html.ActionLink("Detay", "SiparisDetay", new { id = item.ID }, new { @class = "btn btn-success" })
+                            <input type="button" value="Sil" data-id="@item.ID" class="delete-row btn btn-danger" style="width:50px;" />
+
+                    </td>
+                </tr>
+            </tbody>
+        }
+
+    }
+
+</table>
+
+@Html.PagedListPager(Model, page => Url.Action("SiparisListele", new { page }))
+
+<script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".delete-row").click(function () {
+            var id = $(this).attr("data-id");
+            var closestTR = $(this).closest("tr");
+            var confirmDelete = confirm('Form Numara\'si' + id + ' olan kayıdı silmek istediğinizden emin misiniz?');
+            if (confirmDelete) {
+                $.ajax({
+                    url: '/Personel/SiparisSil/' + id,
+                    type: 'POST',
+                    success: function (result) {
+                        if (result == true) {
+                            closestTR.fadeOut(1000, function () {
+                                closestTR.remove();
+                            });
+                        }
+                        else alert("Silme işlemi sırasında hata oluştu");
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>
+

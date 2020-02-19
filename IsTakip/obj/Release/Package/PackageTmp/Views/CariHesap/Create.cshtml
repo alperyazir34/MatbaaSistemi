@@ -1,0 +1,178 @@
+﻿@model IsTakip.Models.CariHesapDB
+
+@{
+    ViewBag.Title = "Hesap Ekle/Güncele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    @using (Html.BeginForm("Create", "CariHesap", FormMethod.Post))
+    {
+        <table>
+            <div class="form-horizontal">
+                @Html.HiddenFor(modelItem => modelItem.ID)
+                <hr />
+                @Html.AntiForgeryToken()
+
+
+                <tr>
+                    <td style="border-right:1px solid #808080;">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                       
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid #808080;">
+                        <div class="form-group">
+                            <p style="margin-left:18px;">Müşteri Adı</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.MusteriAd, new { htmlAttributes = new { @class = "form-control", style = "width:350px;" } })
+                                @Html.ValidationMessageFor(model => model.MusteriAd, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <p style="margin-left:40px;">Kimlik No</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.KimlikNo, new { htmlAttributes = new { @class = "form-control", style = "width:350px; margin-left:25px;" } })
+                                @Html.ValidationMessageFor(model => model.KimlikNo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid #808080;">
+                        <div class="form-group">
+                            <p style="margin-left:18px;">Doğum Tarihi</p>
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.DogumTarihi, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", style = "width:350px;" })
+                                @Html.ValidationMessageFor(model => model.DogumTarihi, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <p style="margin-left:40px;">Cinsiyet</p>
+                            <div class="col-md-10">
+                                @Html.DropDownListFor(model => model.Cinsiyet, new SelectList(
+      new List<SelectListItem>
+      {
+        new SelectListItem { Selected = false, Text = "Bay", Value = "Bay".ToString()},
+        new SelectListItem { Selected = false, Text = "Bayan", Value = "Bayan".ToString()},
+      }, "Value", "Text", 1), "Seçiniz", new { @class = "form-control in-mi-put", style = "width:350px; margin-left:25px;" })
+                                @Html.ValidationMessageFor(model => model.Cinsiyet, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid #808080;">
+                        <div class="form-group">
+                            <p style="margin-left:18px;">Ünvan</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Unvan, new { htmlAttributes = new { @class = "form-control", style = "width:350px;" } })
+                                @Html.ValidationMessageFor(model => model.Unvan, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <p style="margin-left:40px;">Adres</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Adres, new { htmlAttributes = new { @class = "form-control", style = "width:350px;  margin-left:25px;" } })
+                                @Html.ValidationMessageFor(model => model.Adres, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid #808080;">
+                        <div class="form-group">
+                            <p style="margin-left:18px;">Telefon</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Telefon, new { htmlAttributes = new { @class = "form-control", style = "width:350px;" } })
+                                @Html.ValidationMessageFor(model => model.Telefon, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <p style="margin-left:40px;">Cep Telefonu</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.CepTel, new { htmlAttributes = new { @class = "form-control", style = "width:350px; margin-left:25px;" } })
+                                @Html.ValidationMessageFor(model => model.CepTel, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid #808080;">
+                        <div class="form-group">
+                            <p style="margin-left:18px;">E-Mail</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.EMail, new { htmlAttributes = new { @class = "form-control", style = "width:350px;" } })
+                                @Html.ValidationMessageFor(model => model.EMail, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <p style="margin-left:40px;">Vergi Dairesi</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.VergiDairesi, new { htmlAttributes = new { @class = "form-control", style = "width:350px; margin-left:25px;" } })
+                                @Html.ValidationMessageFor(model => model.VergiDairesi, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-right:1px solid #808080;">
+                        <div class="form-group">
+                            <p style="margin-left:18px;">Vergi No</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.VergiNo, new { htmlAttributes = new { @class = "form-control", style = "width:350px;" } })
+                                @Html.ValidationMessageFor(model => model.VergiNo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <p style="margin-left:40px;">Teslimat Adresi</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TeslimatAdres, new { htmlAttributes = new { @class = "form-control", style = "width:350px; margin-left:25px;" } })
+                                @Html.ValidationMessageFor(model => model.TeslimatAdres, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                   
+                    <td>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Kaydet" class="btn btn-success" /> |
+                                @Html.ActionLink("Lİsteye Geri Dön", "Index", "CariHesap", new { @class = "btn btn-success" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </div>
+
+        </table>
+    }
+</center>
+<br />
+
+
+
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

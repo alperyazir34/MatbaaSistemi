@@ -1,0 +1,69 @@
+﻿@model IEnumerable<IsTakip.Models.PersonelDB>
+@{
+    ViewBag.Title = "PersonelListesi";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+<table class="table" border="1">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonelAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gorev)
+        </th>
+        @*<th>İşlemler</th>*@
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gorev)
+            </td>
+
+            @*<td>
+                @Html.ActionLink("Düzenle", "PersonelDuz","Kullanici", new { id = item.ID }, new { @class = "btn btn-success" }) |
+                <input type="button" value="Sil" data-id="@item.ID" class="delete-row btn btn-danger" />
+            </td>*@
+        </tr>
+        @Html.HiddenFor(modelItem => item.ID)
+    }
+
+</table>
+<script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".delete-row").click(function () {
+            var id = $(this).attr("data-id");
+            var closestTR = $(this).closest("tr");
+            var confirmDelete = confirm('Personel Numara\'si' + id + ' olan kayıdı silmek istediğinizden emin misiniz?');
+            if (confirmDelete) {
+                $.ajax({
+                    url: '/Kullanici/PersonelSil/' + id,
+                    type: 'POST',
+                    success:function(result) {
+                        if (result == true) {
+                            closestTR.fadeOut(1000, function() {
+                                closestTR.remove();
+                            });
+                        }
+                        else alert("Silme işlemi sırasında hata oluştu");
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>
+

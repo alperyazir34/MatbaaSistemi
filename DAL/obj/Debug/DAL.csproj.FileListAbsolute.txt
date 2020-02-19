@@ -1,0 +1,20 @@
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\bin\Debug\DAL.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\bin\Debug\DAL.pdb
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\obj\Debug\DAL.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\DAL\obj\Debug\DAL.pdb
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\bin\Debug\DAL.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\bin\Debug\DAL.pdb
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\obj\Debug\DAL.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\DAL\obj\Debug\DAL.pdb
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\bin\Debug\DAL.dll
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\bin\Debug\DAL.pdb
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\obj\Debug\DAL.dll
+C:\Users\alper.yazir\Desktop\IsTakip\DAL\obj\Debug\DAL.pdb
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\DAL\bin\Debug\DAL.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\DAL\bin\Debug\DAL.pdb
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\DAL\obj\Debug\DAL.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\DAL\obj\Debug\DAL.pdb

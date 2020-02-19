@@ -1,0 +1,236 @@
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\ApplicationInsights.config
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\csc.exe
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\vbc.exe
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\IsTakip.dll.config
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\IsTakip.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\IsTakip.pdb
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.Web.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Helpers.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Mvc.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Razor.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.Razor.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.Web.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Razor.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.Razor.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Helpers.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Mvc.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\obj\Debug\IsTakip.csprojResolveAssemblyReference.cache
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\obj\Debug\IsTakip.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\obj\Debug\IsTakip.pdb
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\DAL.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\DAL.pdb
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Printing.v17.1.Core.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Data.v17.1.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Pdf.v17.1.Core.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Printing.v17.1.Core.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Data.v17.1.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Pdf.v17.1.Core.xml
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\de\DevExpress.Data.v17.1.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\es\DevExpress.Data.v17.1.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\ja\DevExpress.Data.v17.1.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\ru\DevExpress.Data.v17.1.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\de\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\es\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Vudu\Desktop\TechNoRob\IsTakip\IsTakip\bin\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\ApplicationInsights.config
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\csc.exe
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\vbc.exe
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\VBCSCompiler.exe
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\IsTakip.dll.config
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\IsTakip.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\IsTakip.pdb
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\DAL.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Printing.v17.1.Core.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.Web.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.ApplicationInsights.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Helpers.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Mvc.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Razor.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.Deployment.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.Razor.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Data.v17.1.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Pdf.v17.1.Core.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\DAL.pdb
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Printing.v17.1.Core.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.Web.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.ApplicationInsights.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Razor.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.Deployment.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Webpages.Razor.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Helpers.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\System.Web.Mvc.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Data.v17.1.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\DevExpress.Pdf.v17.1.Core.xml
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\de\DevExpress.Data.v17.1.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\es\DevExpress.Data.v17.1.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\ja\DevExpress.Data.v17.1.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\ru\DevExpress.Data.v17.1.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\de\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\es\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\bin\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\obj\Debug\IsTakip.csprojResolveAssemblyReference.cache
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\obj\Debug\IsTakip.dll
+C:\Users\burak.sahin\Desktop\TechNoRob\IsTakip\IsTakip\obj\Debug\IsTakip.pdb
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\ApplicationInsights.config
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\csc.exe
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\vbc.exe
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\VBCSCompiler.exe
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\IsTakip.dll.config
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\IsTakip.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\IsTakip.pdb
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\DAL.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\DevExpress.Data.v17.1.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\DevExpress.Pdf.v17.1.Core.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\DAL.pdb
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\DevExpress.Printing.v17.1.Core.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\Microsoft.AI.Web.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\Microsoft.ApplicationInsights.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\System.Web.Razor.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\System.Web.Webpages.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\System.Web.Webpages.Deployment.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\System.Web.Webpages.Razor.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\System.Web.Helpers.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\System.Web.Mvc.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\DevExpress.Data.v17.1.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\DevExpress.Pdf.v17.1.Core.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\de\DevExpress.Data.v17.1.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\es\DevExpress.Data.v17.1.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\ja\DevExpress.Data.v17.1.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\ru\DevExpress.Data.v17.1.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\de\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\es\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\obj\Debug\IsTakip.csprojResolveAssemblyReference.cache
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\obj\Debug\IsTakip.dll
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\obj\Debug\IsTakip.pdb
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\PagedList.xml
+C:\Users\alper.yazir\Desktop\IsTakip\IsTakip\bin\PagedList.Mvc.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\ApplicationInsights.config
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\csc.exe
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\vbc.exe
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\VBCSCompiler.exe
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\IsTakip.dll.config
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\IsTakip.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\IsTakip.pdb
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\DAL.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\DevExpress.Data.v17.1.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\DevExpress.Pdf.v17.1.Core.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\DAL.pdb
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\DevExpress.Printing.v17.1.Core.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\Microsoft.AI.Web.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\Microsoft.ApplicationInsights.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\PagedList.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\PagedList.Mvc.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\System.Web.Razor.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\System.Web.Webpages.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\System.Web.Webpages.Deployment.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\System.Web.Webpages.Razor.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\System.Web.Helpers.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\System.Web.Mvc.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\DevExpress.Data.v17.1.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\DevExpress.Pdf.v17.1.Core.xml
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\de\DevExpress.Data.v17.1.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\es\DevExpress.Data.v17.1.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\ja\DevExpress.Data.v17.1.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\ru\DevExpress.Data.v17.1.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\de\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\es\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\bin\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\obj\Debug\IsTakip.csprojResolveAssemblyReference.cache
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\obj\Debug\IsTakip.dll
+C:\Users\alper.yazir\Desktop\Projeler\İş Takip\IsTakip\IsTakip\obj\Debug\IsTakip.pdb
